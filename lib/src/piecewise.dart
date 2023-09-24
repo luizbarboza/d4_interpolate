@@ -6,19 +6,18 @@ import 'value.dart';
 /// pair of [values].
 ///
 /// The returned interpolator maps *t* in \[0, 1 / (*n* - 1)\] to
-/// [interpolate]([values]\[0\], [values]\[1\]), *t* in \[1 / (*n* - 1), 2 /
-/// (*n* - 1)\] to [interpolate]([values]\[1\], [values]\[2\]), and so on, where
-/// *n* = [values].length. In effect, this is a lightweight linear scale. For
-/// example, to blend through red, green and blue:
+/// [interpolatorFactory]([values]\[0\], [values]\[1\]), *t* in \[1 / (*n* - 1),
+/// 2 / (*n* - 1)\] to [interpolatorFactory]([values]\[1\], [values]\[2\]), and
+/// so on, where *n* = [values].length. In effect, this is a lightweight linear
+/// scale. For example, to blend through red, green and blue:
 ///
 /// ```dart
-/// final interpolate = piecewise(interpolateRgbGamma(2.2), ["red", "green", "blue"]);
+/// final interpolate = piecewise(["red", "green", "blue"], interpolateRgbGamma(2.2));
 /// ```
 ///
 /// If [interpolatorFactory] is not specified, defaults to [interpolate].
-Object? Function(num) piecewise(List<Object?> values,
-    [Object? Function(num) Function(Object?, Object?) interpolatorFactory =
-        interpolate]) {
+Object? Function(num) piecewise<T>(List<T> values,
+    [Object? Function(num) Function(T, T) interpolatorFactory = interpolate]) {
   var n = values.length - 1,
       v = values[0],
       I = List.generate(
