@@ -30,6 +30,8 @@ import 'value.dart';
 /// of the returned list may adversely affect subsequent evaluation of the
 /// interpolator. No copy is made for performance reasons; interpolators are
 /// often part of the inner loop of animated transitions.
+///
+/// {@category Value interpolation}
 List<Object?> Function(num) interpolateList<T>(List<T> a, List<T> b) {
   if (b is TypedData) {
     return interpolateNumberList(a as List<num>, b as List<num>);

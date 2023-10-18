@@ -16,16 +16,10 @@
 /// particularly noticeable with interpolating opacity. To avoid scientific
 /// notation, start or end the transition at 1e-6: the smallest value that is
 /// not stringified in scientific notation.
+///
+/// {@category Value interpolation}
 num Function(num) interpolateNumber(num a, num b) {
   return (t) {
     return a * (1 - t) + b * t;
   };
-}
-
-num test() {
-  return 0.000001;
-}
-
-void main() {
-  print(test());
 }

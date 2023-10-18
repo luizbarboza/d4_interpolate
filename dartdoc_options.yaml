@@ -1,0 +1,8 @@
+dartdoc:
+  categories:
+    "Value interpolation":
+      markdown: doc/value.md
+    "Color interpolation":
+      markdown: doc/color.md
+    "Zoom interpolation":
+      markdown: doc/zoom.md

@@ -19,6 +19,8 @@ import 'color.dart';
 /// See Eric Brasseur’s article,
 /// [Gamma error in picture scaling](http://www.ericbrasseur.org/gamma.html),
 /// for more on gamma correction.
+///
+/// {@category Color interpolation}
 String Function(num) Function(Object?, Object?) interpolateRgbGamma(num y) {
   var color = gamma(y);
   return (start, end) {
@@ -57,6 +59,8 @@ final _ininterpolateRgb = interpolateRgbGamma(1);
 /// ```
 ///
 /// <img src="https://raw.githubusercontent.com/d3/d3-interpolate/master/img/rgb.png" width="100%" height="40" alt="rgb">
+///
+/// {@category Color interpolation}
 String Function(num) interpolateRgb(Object? a, Object? b) =>
     _ininterpolateRgb(a, b);
 
@@ -95,6 +99,8 @@ String Function(num) Function(List<Object?>) _rgbSpline(
 /// Opacity interpolation is not currently supported. See also
 /// [interpolateBasis], and see
 /// [d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic) for examples.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateRgbBasis(List<Object?> colors) =>
     _rgbSpline(interpolateBasis)(colors);
 
@@ -107,5 +113,7 @@ String Function(num) interpolateRgbBasis(List<Object?> colors) =>
 /// useful, for example, to create cyclical color scales. Opacity interpolation
 /// is not currently supported. See also [interpolateBasisClosed], and see
 /// [d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic) for examples.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateRgbBasisClosed(List<Object?> colors) =>
     _rgbSpline(interpolateBasisClosed)(colors);

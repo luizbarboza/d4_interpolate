@@ -5,6 +5,8 @@ import 'color.dart';
 /// If either hue is [double.nan], the opposing value is used. The shortest path
 /// between hues is used. The return value of the interpolator is a number in
 /// \[0, 360).
+///
+/// {@category Color interpolation}
 num Function(num) interpolateHue(num a, num b) {
   var i = hue(a, b);
   return (t) {

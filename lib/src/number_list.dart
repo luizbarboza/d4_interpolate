@@ -13,6 +13,8 @@ import 'number.dart';
 /// Note: For performance reasons, **no defensive copy** is made of the template
 /// list and the arguments [a] and [b]; modifications of these lists may affect
 /// subsequent evaluation of the interpolator.
+///
+/// {@category Value interpolation}
 List<T> Function(num) interpolateNumberList<T extends num>(
     List<T> a, List<T> b) {
   var n = min(b.length, a.length),

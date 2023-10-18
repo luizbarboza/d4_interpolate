@@ -7,6 +7,8 @@ import 'dart:math';
 /// [values].length. In effect, this is a lightweight
 /// [quantize scale](https://github.com/d3/d3-scale/blob/master/README.md#quantize-scales)
 /// with a fixed domain of \[0, 1\].
+///
+/// {@category Value interpolation}
 Object? Function(num) interpolateDiscrete(List<Object?> values) {
   var n = values.length;
   return (t) {

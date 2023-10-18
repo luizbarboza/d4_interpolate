@@ -26,6 +26,8 @@ import 'value.dart';
 /// the returned map may adversely affect subsequent evaluation of the
 /// interpolator. No copy is made for performance reasons; interpolators are
 /// often part of the inner loop of animated transitions.
+///
+/// {@category Value interpolation}
 Map<K, Object?> Function(num) interpolateMap<K, V>(Map<K, V> a, Map<K, V> b) {
   var i = <K, Object? Function(num)>{},
       c = <K, Object?>{},

@@ -38,6 +38,8 @@ String Function(num) Function(Object?, Object?) Function(num) _cubehelixGamma(
 /// See Eric Brasseur’s article,
 /// [Gamma error in picture scaling](http://www.ericbrasseur.org/gamma.html),
 /// for more on gamma correction.
+///
+/// {@category Color interpolation}
 String Function(num) Function(Object?, Object?) interpolateCubehelixGamma(
         num gamma) =>
     _cubehelixGamma(hue)(gamma);
@@ -46,6 +48,8 @@ String Function(num) Function(Object?, Object?) interpolateCubehelixGamma(
 /// hues.
 ///
 /// <img src="https://raw.githubusercontent.com/d3/d3-interpolate/master/img/cubehelixGammaLong.png" width="100%" height="40" alt="cubehelixGammaLong">
+///
+/// {@category Color interpolation}
 String Function(num) Function(Object?, Object?) interpolateCubehelixGammaLong(
         num gamma) =>
     _cubehelixGamma(nogamma)(gamma);
@@ -71,6 +75,8 @@ String Function(num) Function(Object?, Object?) interpolateCubehelixGammaLong(
 /// ```
 ///
 /// <img src="https://raw.githubusercontent.com/d3/d3-interpolate/master/img/cubehelix.png" width="100%" height="40" alt="cubehelix">
+///
+/// {@category Color interpolation}
 String Function(num) interpolateCubehelix(Object? a, Object? b) =>
     interpolateCubehelixGamma(1)(a, b);
 
@@ -78,5 +84,7 @@ String Function(num) interpolateCubehelix(Object? a, Object? b) =>
 /// between hues.
 ///
 /// <img src="https://raw.githubusercontent.com/d3/d3-interpolate/master/img/cubehelixLong.png" width="100%" height="40" alt="cubehelixLong">
+///
+/// {@category Color interpolation}
 String Function(num) interpolateCubehelixLong(Object? a, Object? b) =>
     interpolateCubehelixGammaLong(1)(a, b);

@@ -33,6 +33,8 @@ String Function(num) _one(num Function(num) b) {
 /// static parts (of string [b]) are a space between the two numbers (`" "`),
 /// and the suffix (`"px Comic-Sans"`). The result of the interpolator at *t* =
 /// 0.5 is `"400 24px Comic-Sans"`.
+///
+/// {@category Value interpolation}
 String Function(num) interpolateString(String a, String b) {
   var bi = 0,
       am = _re.allMatches(a).iterator,

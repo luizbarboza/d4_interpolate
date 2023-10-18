@@ -25,8 +25,12 @@ String Function(num) Function(Object?, Object?) _hsl(
 /// using [Hsl.from]. If either color’s hue or saturation is [double.nan], the
 /// opposing color’s channel value is used. The shortest path between hues is
 /// used. The return value of the interpolator is an RGB string.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateHsl(Object? a, Object? b) => _hsl(hue)(a, b);
 
 /// Like [interpolateHsl], but does not use the shortest path between hues.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateHslLong(Object? a, Object? b) =>
     _hsl(nogamma)(a, b);

@@ -59,6 +59,8 @@ class _GeneralZoomInterpolator extends ZoomInterpolator {
 ///
 /// When [rho] is close to 0, the interpolator is almost linear. The default
 /// curvature is sqrt(2).
+///
+/// {@category Zoom interpolation}
 ZoomInterpolator Function(View, View) interpolateZoomRho(num rho) {
   var rho_ = max(1e-3, rho), rho2 = rho_ * rho_, rho4 = rho2 * rho2;
 
@@ -70,7 +72,6 @@ ZoomInterpolator Function(View, View) interpolateZoomRho(num rho) {
 
     // Special case for u0 ≅ u1.
     if (d2 < _epsilon2) {
-      print("test");
       S = log(w1 / w0) / rho_;
       return _EspecialZoomInterpolator(rho_, S, ux0, uy0, w0, dx, dy);
     }
@@ -105,4 +106,6 @@ var _interpolateZoom = interpolateZoomRho(sqrt2);
 /// duration is based on the path length of the curved trajectory through
 /// *x*,*y* space. If you want a slower or faster transition, multiply this by
 /// an arbitrary scale factor (*V* as described in the original paper).
+///
+/// {@category Zoom interpolation}
 ZoomInterpolator interpolateZoom(View a, View b) => _interpolateZoom(a, b);

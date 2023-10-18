@@ -27,8 +27,12 @@ String Function(num) Function(Object?, Object?) _hcl(
 /// CIELChab using [Hcl.from]. If either color’s hue or chroma is [double.nan],
 /// the opposing color’s channel value is used. The shortest path between hues
 /// is used. The return value of the interpolator is an RGB string.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateHcl(Object? a, Object? b) => _hcl(hue)(a, b);
 
 /// Like [interpolateHcl], but does not use the shortest path between hues.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateHclLong(Object? a, Object? b) =>
     _hcl(nogamma)(a, b);

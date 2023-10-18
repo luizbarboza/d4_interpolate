@@ -14,6 +14,8 @@ num basis(num t1, num v0, num v1, num v2, num v3) {
 /// [values]\[0\] at *t* = 0 and [values]\[[values].length - 1\] at *t* = 1. See
 /// also
 /// [d3.curveBasis](https://github.com/d3/d3-shape/blob/master/README.md#curveBasis).
+///
+/// {@category Value interpolation}
 num Function(num) interpolateBasis(List<num> values) {
   var n = values.length - 1;
   return (num t) {

@@ -7,6 +7,8 @@ import 'basis.dart';
 /// one-dimensional spline has cyclical C² continuity when repeated around *t*
 /// in \[0,1\]. See also
 /// [d3.curveBasisClosed](https://github.com/d3/d3-shape/blob/master/README.md#curveBasisClosed).
+///
+/// {@category Value interpolation}
 num Function(num) interpolateBasisClosed(List<num> values) {
   var n = values.length;
   return (num t) {

@@ -16,6 +16,8 @@ import 'value.dart';
 /// ```
 ///
 /// If [interpolatorFactory] is not specified, defaults to [interpolate].
+///
+/// {@category Value interpolation}
 Object? Function(num) piecewise<T>(List<T> values,
     [Object? Function(num) Function(T, T) interpolatorFactory = interpolate]) {
   var n = values.length - 1,

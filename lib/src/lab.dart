@@ -9,6 +9,8 @@ import 'color.dart';
 /// The colors [a] and [b] need not be in CIELAB; they will be converted to
 /// CIELAB using [Lab.from]. The return value of the interpolator is an RGB
 /// string.
+///
+/// {@category Color interpolation}
 String Function(num) interpolateLab(Object? a, Object? b) {
   var l = nogamma((a = Lab.from(a)).l, (b = Lab.from(b)).l),
       a_ = nogamma((a as Lab).a, (b as Lab).a),

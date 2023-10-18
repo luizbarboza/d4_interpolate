@@ -14,6 +14,8 @@ import 'map.dart';
 /// defensive copies of their output, such as [interpolateList] and
 /// [interpolateMap]. For those interpolators, you must wrap the interpolator
 /// and create a copy for each returned value.
+///
+/// {@category Value interpolation}
 List<T> quantize<T>(T Function(num) interpolator, int n) {
   return List.generate(n, (i) => interpolator(i / (n - 1)));
 }

@@ -27,6 +27,8 @@ import 'string.dart';
 ///
 /// It's important to note that, unless the chosen interpolator allows
 /// otherwise, [a] and [b] must be of the same type.
+///
+/// {@category Value interpolation}
 Object? Function(num) interpolate(Object? a, Object? b) {
   return (b is num
       ? interpolateNumber
