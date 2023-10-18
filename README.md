@@ -28,6 +28,6 @@ This package provides a variety of interpolation methods for blending between tw
 
 See one of:
 
-* [Value interpolation](https://pub.dev/documentation/d4_array/latest/topics/Value%20interpolation-topic.html) - These are the most general interpolators, suitable for most values.
-* [Color interpolation](https://pub.dev/documentation/d4_array/latest/topics/Color%20interpolation-topic.html) - Interpolators for colors in various color spaces.
-* [Zoom interpolation](https://pub.dev/documentation/d4_array/latest/topics/Zoom%20interpolation-topic.html) - An interpolator for zooming smoothly between two views of a two-dimensional plane based on [“Smooth and efficient zooming and panning”](https://www.win.tue.nl/~vanwijk/zoompan.pdf) by Jarke J. van Wijk and Wim A.A. Nuij.
+* [Value interpolation](https://pub.dev/documentation/d4_interpolate/latest/topics/Value%20interpolation-topic.html) - These are the most general interpolators, suitable for most values.
+* [Color interpolation](https://pub.dev/documentation/d4_interpolate/latest/topics/Color%20interpolation-topic.html) - Interpolators for colors in various color spaces.
+* [Zoom interpolation](https://pub.dev/documentation/d4_interpolate/latest/topics/Zoom%20interpolation-topic.html) - An interpolator for zooming smoothly between two views of a two-dimensional plane based on [“Smooth and efficient zooming and panning”](https://www.win.tue.nl/~vanwijk/zoompan.pdf) by Jarke J. van Wijk and Wim A.A. Nuij.
