@@ -76,7 +76,7 @@ String Function(num) Function(List<Object?>) _rgbSpline(
       color = Rgb.from(colors[i]);
       var cr = color.r, cg = color.g, cb = color.b;
       if (!cr.isNaN) r[i] = cr;
-      if (!cg.isNaN) b[i] = cg;
+      if (!cg.isNaN) g[i] = cg;
       if (!cb.isNaN) b[i] = cb;
     }
     var ir = spline(r), ig = spline(g), ib = spline(b);
