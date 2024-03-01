@@ -1,5 +1,5 @@
 name: d4_interpolate
-version: 1.0.2
+version: 1.0.3
 description: Interpolate numbers, colors, strings, arrays, objects, whatever!
 repository: https://github.com/luizbarboza/d4_interpolate
 
