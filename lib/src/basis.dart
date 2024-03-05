@@ -27,8 +27,8 @@ num Function(num) interpolateBasis(List<num> values) {
       t = 1;
       i = n - 1;
     } else {
-      t = t * n;
-      i = t.floor();
+      // t = t * n;
+      i = (t * n).floor();
     }
     var v1 = values[i],
         v2 = values[i + 1],
