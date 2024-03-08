@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Interpolate numbers, colors, strings, arrays, objects, whatever!
+  Interpolate numbers, colors, strings, lists, maps, whatever!
 </p>
 
 <p align="center">
