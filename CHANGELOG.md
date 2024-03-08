@@ -1,3 +1,9 @@
+## 1.0.4
+
+### Fixed
+
+- Fixed bug that caused the interpolateBasis function to return incorrect values
+
 ## 1.0.3
 
 ### Fixed
